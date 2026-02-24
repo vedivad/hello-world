@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hello-world
+    runtime: java
+    buildCommand: ./mvnw -DskipTests package
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: PORT
+        generateValue: false
+    plan: free
